@@ -1,5 +1,9 @@
 document.getElementById('btn-deposit').addEventListener('click', () => {
     const depositFieldInt = getIntFromInput('deposit-field')
+    if(isNaN(depositFieldInt)){
+        alert("Please enter an integer...")
+        return;
+    }
     
     const previousDepositTotalInt = getIntFromTextElement('deposit-total')
 
